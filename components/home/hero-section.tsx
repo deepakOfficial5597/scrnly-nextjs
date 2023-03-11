@@ -9,7 +9,7 @@ const HeroSection = () => {
             <div className="w-full flex flex-col gap-2 items-center bg-gray-200 p-10 rounded-md">
               <input id="image__url" type="text" className="mt-1 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm" placeholder="Enter tweet URL or any website URL"/>
               <p> OR </p>
-              <Link href="/editor?t=ui" className="px-4 py-2 bg-indigo-900 text-white rounded-md text-xs sm:text-sm">Upload a screenshot</Link>
+              <Link href="/editor?t=ui" className="px-4 py-2 bg-primary-default text-white rounded-md text-xs sm:text-sm">Upload a screenshot</Link>
             </div>
             <div className="w-full flex flex-col gap-2 items-center">
               <div className="w-full flex flex-row gap-2 justify-center">
