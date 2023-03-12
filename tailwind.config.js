@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         primary: {
           default: "#6f3ff7",
-          accent: colors.gray[900]
+          accent: colors.gray[900],
+          pink: colors.pink[900]
         },
         background: {
           primary: colors.white,

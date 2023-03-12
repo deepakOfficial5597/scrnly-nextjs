@@ -1,5 +1,6 @@
 import Button from "@/components/base/Button"
 import useEditor from "@/shared/hooks/useEditor"
+import { getImageSizeStyles } from "@/shared/utils/helpers"
 
 const ImageSizeSelection = () => {
     const { panel, setMockup,setPanel } = useEditor()
@@ -11,15 +12,11 @@ const ImageSizeSelection = () => {
             }
         })
         setMockup((previousMockup) => {
-            const tmpSize = size === "SMALL" ? "25%" : (size === "MEDIUM" ? "50%" : "75%")
             return {
             ...previousMockup,
             styles: {
                 ...previousMockup.styles,
-                height: tmpSize,
-                width: tmpSize,
-                objectFit: "cover",
-                backgroundRepeat: "no-repeat"
+                ...getImageSizeStyles(size)
             }
         }})
     }

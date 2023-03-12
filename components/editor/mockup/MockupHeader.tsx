@@ -9,7 +9,7 @@ const MockupHeader = () => {
     return (<>
             {
                 (panel.mockup == MOCKUP_CONFIG[1].title) && 
-                <div className="flex gap-1 justify-start p-2 bg-white rounded-tl-[8px] rounded-tr-[8px]">
+                <div className="flex gap-1 justify-start p-2 bg-white" style={{borderTopLeftRadius: panel.radius + 'px', borderTopRightRadius: panel.radius + 'px'}}>
                     <MdCircle className="text-red-700"/>
                     <MdCircle className="text-yellow-700"/>
                     <MdCircle className="text-green-700"/>
@@ -17,7 +17,7 @@ const MockupHeader = () => {
             }
             {
                 (panel.mockup == MOCKUP_CONFIG[2].title) && 
-                <div className="flex gap-1 justify-start p-2 bg-background-dark text-white rounded-tl-[8px] rounded-tr-[8px]">
+                <div className="flex gap-1 justify-start p-2 bg-background-dark text-white" style={{borderTopLeftRadius: panel.radius + 'px', borderTopRightRadius: panel.radius + 'px'}}>
                     <MdCircle className="text-red-700"/>
                     <MdCircle className="text-yellow-700"/>
                     <MdCircle className="text-green-700"/>
@@ -25,7 +25,7 @@ const MockupHeader = () => {
             }
             {
                 (panel.mockup == MOCKUP_CONFIG[3].title) && 
-                <div className="flex gap-2 justify-end p-2 bg-white rounded-tl-[8px] rounded-tr-[8px]">
+                <div className="flex gap-2 justify-end p-2 bg-white" style={{borderTopLeftRadius: panel.radius + 'px', borderTopRightRadius: panel.radius + 'px'}}>
                     <HiMinusSm />
                     <BiCheckbox />
                     <HiOutlineX />
@@ -33,7 +33,7 @@ const MockupHeader = () => {
             }
             {
                 (panel.mockup == MOCKUP_CONFIG[4].title) && 
-                <div className="flex gap-2 justify-end p-2 bg-background-dark text-white rounded-tl-[8px] rounded-tr-[8px]">
+                <div className="flex gap-2 justify-end p-2 bg-background-dark text-white" style={{borderTopLeftRadius: panel.radius + 'px', borderTopRightRadius: panel.radius + 'px'}}>
                     <HiMinusSm />
                     <BiCheckbox />
                     <HiOutlineX />

@@ -17,7 +17,7 @@ export function getDefaultImagePosition():string{
     return IMAGE_POSITION_CONFIG.CENTER_CENTER;
 }
 export function getDefaultBorderRadius():string{
-    return "2";
+    return "8";
 }
 export function getDefaultBoxShadow():number{
     return 0;
@@ -138,6 +138,16 @@ export function getCanvasSizeStyles(size:string){
                 height: "570px",
                 width: "570px"
             }
+    }
+}
+
+export function getImageSizeStyles(size:string){
+    const tmpSize = size === "SMALL" ? "25%" : (size === "MEDIUM" ? "50%" : "75%")
+    return {
+        height: tmpSize,
+        width: tmpSize,
+        objectFit: "cover",
+        backgroundRepeat: "no-repeat"
     }
 }
 

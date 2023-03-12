@@ -1,6 +1,5 @@
 import useEditor from "@/shared/hooks/useEditor"
-import { getDefaultBorderRadius, getMockupBorderRadiusStyles } from "@/shared/utils/helpers"
-import { useState } from "react"
+import { getMockupBorderRadiusStyles } from "@/shared/utils/helpers"
 
 const RadiusSelection = () => {
 
@@ -15,12 +14,12 @@ const RadiusSelection = () => {
         setMockup((previousMockup) => {
             return {
             ...previousMockup,
-            styles: { ...previousMockup.styles , ...getMockupBorderRadiusStyles(mockup.type, value+"%")}
+            styles: { ...previousMockup.styles , ...getMockupBorderRadiusStyles(mockup.type, value+"px")}
         }})
     }
 
     return <>
-        <input type="range" className="range accent-primary-default" value={panel.radius} max={100} onChange={(e) => changeRadius(e.target.value)}/>
+        <input type="range" className="range accent-primary-default" value={panel.radius} max={32} onChange={(e) => changeRadius(e.target.value)}/>
     </>
 }
 

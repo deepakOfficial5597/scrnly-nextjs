@@ -6,7 +6,8 @@ export interface Mockup {
     styles?: any,
     classNames?: string,
     type: MockupHeaderTypes,
-    imageUrl?: string
+    imageUrl?: string,
+    imageStyles: any
 }
 export interface Panel {
     backgroundType: string, 

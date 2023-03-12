@@ -8,7 +8,7 @@ const EditorMockup = () => {
         <div className="relative w-full h-full flex flex-col">
             <MockupHeader />
             <div className={`flex-1`}
-                style={{ background : `url(${mockup.imageUrl})`, ...getMockupBorderRadiusStyles(mockup.type, panel.radius + "%"),backgroundRepeat:"no-repeat",backgroundOrigin:"border-box",overflow:"hidden",backgroundPosition:"center",backgroundSize:"contain" }}
+                style={{ backgroundImage : `url(${mockup.imageUrl})`, ...getMockupBorderRadiusStyles(mockup.type, panel.radius + "px"),backgroundRepeat:"no-repeat", ...mockup.imageStyles}}
             ></div>      
         </div>
         
