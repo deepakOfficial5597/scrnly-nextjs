@@ -1,4 +1,5 @@
-import { HiCheckCircle } from "react-icons/hi"
+import { MdRadioButtonChecked } from "react-icons/md"
+
 const MockupCard = ({ title, imagePath, selected=false }:MockupCardProps) => {
     return (
         <div className={`flex flex-col justify-center items-center pointer-events-none`}>
@@ -7,7 +8,7 @@ const MockupCard = ({ title, imagePath, selected=false }:MockupCardProps) => {
                 {
                     selected &&
                     <div className="absolute top-2 left-2">
-                        <HiCheckCircle className="text-indigo-900 text-lg"/>
+                        <MdRadioButtonChecked className="text-text-secondary"/>
                     </div>
                 }
             </div>

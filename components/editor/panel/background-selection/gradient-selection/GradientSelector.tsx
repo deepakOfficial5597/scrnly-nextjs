@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
-import { HiCheckCircle } from "react-icons/hi"
+import { MdRadioButtonChecked } from "react-icons/md"
 import { BACKGROUND_CONFIG, GRADIENT_CONFIG } from '@/shared/constants/config'
 import { getDefaultGradient } from '@/shared/utils/helpers'
 import useEditor from '@/shared/hooks/useEditor'
@@ -37,11 +37,11 @@ const GradientSelector = ({active = false}:GradientSelectorProps) => {
     return (
         <Listbox value={panel.backgroundType} onChange={changeGradientSelection}>
             <div className="relative w-full h-full">
-                <Listbox.Button className="relative h-full w-full hover:border-2 hover:border-primary-default rounded-md" as="div" style={{background: panel.backgroundType === BACKGROUND_CONFIG.GRADIENT ? canvas?.styles?.background : getDefaultGradient().gradient }} onClick={ reInitializeState }>
+                <Listbox.Button className="relative h-full w-full border-2 border-transparent hover:border-2 hover:border-primary-default rounded-md" as="div" style={{background: panel.backgroundType === BACKGROUND_CONFIG.GRADIENT ? canvas?.styles?.background : getDefaultGradient().gradient }} onClick={ reInitializeState }>
                     {
                         active && (
                            <span className="absolute top-1 left-1">
-                                <HiCheckCircle className="text-primary-default"/>
+                                <MdRadioButtonChecked className="text-text-secondary"/>
                            </span> 
                         )   
                     }

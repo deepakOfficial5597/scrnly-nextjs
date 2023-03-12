@@ -26,15 +26,15 @@ const BackgroundSelection = () => {
         <div className="w-full h-[90px] flex flex-row gap-2 justify-between">
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer">
                 <GradientSelector active={panel.backgroundType === BACKGROUND_OPTIONS.GRADIENT}/>
-                <p className="text-xs text-center">Gradient Template</p>
+                <p className="text-xs text-center text-text-default">Gradient Template</p>
             </div>
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer">
                 <SolidColorSelector active={panel.backgroundType === BACKGROUND_OPTIONS.SOLID}/>
-                <p className="text-xs text-center">Solid Color</p>
+                <p className="text-xs text-center text-text-default">Solid Color</p>
             </div>
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer" onClick={setBlankCanvasBackgroound}>
                 <NoBackgroundSelection active={panel.backgroundType === BACKGROUND_OPTIONS.NO_BACKGROUND}/>
-                <p className="text-xs text-center">No Background</p>
+                <p className="text-xs text-center text-text-default">No Background</p>
             </div>
         </div>
     </>

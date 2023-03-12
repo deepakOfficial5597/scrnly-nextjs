@@ -19,7 +19,8 @@ export interface Panel {
     imageSize: string,
     radius: string,
     downloadType: string,
-    downloadSize: string
+    downloadSize: string,
+    shadow: string
 }
 export interface GradientConfig {
     title: string,

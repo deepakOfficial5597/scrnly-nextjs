@@ -22,7 +22,7 @@ export const MOCKUP_INITIAL_STATE:Mockup = {
     },
     classNames:SHADOW_CONFIG[getDefaultBoxShadow()],
     type: MockupHeaderTypes.NO_FRAME,
-    imageUrl: "https://th.bing.com/th/id/OIP.QJjN2LrOLtSwHKVUKUzSPAHaEK?pid=ImgDet&rs=1",
+    // imageUrl: "https://th.bing.com/th/id/OIP.QJjN2LrOLtSwHKVUKUzSPAHaEK?pid=ImgDet&rs=1",
     imageStyles:{
         backgroundOrigin:"border-box",
         overflow:"hidden",
@@ -40,7 +40,8 @@ export const PANEL_INITIAL_STATE:Panel = {
     mockup: getDefaultMockup().title,
     radius: getDefaultBorderRadius(),
     downloadSize: "1",
-    downloadType: "PNG"
+    downloadType: "PNG",
+    shadow: "0"
 }
 export const EDITOR_CONTEXT_INITIAL_STATE:EditorState = {
     canvas : CANVAS_INITIAL_STATE,

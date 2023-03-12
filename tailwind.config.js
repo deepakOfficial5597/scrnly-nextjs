@@ -19,11 +19,13 @@ module.exports = {
           dark: colors.gray[900],
           primary_active: colors.indigo[100],
           light: colors.gray[200],
+          extra_light: "#f8f8f8"
         },
         text: {
           primary: colors.black,
           customgray: colors.gray[600],
-          secondary: colors.white
+          secondary: colors.white,
+          default: "#323436"
         },
         border:{
           light: "#dfe1e1",
@@ -32,7 +34,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'demo-screenshot': "url('/assets/demo-screenshot.png')"
+        'demo-screenshot': "url('/assets/demo-screenshot.png')",
+        'canvas-grid': "url('/assets/grid.png')"
       }
     },
   },

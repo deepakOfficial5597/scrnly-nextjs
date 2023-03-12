@@ -1,3 +1,4 @@
+import useEditor from "@/shared/hooks/useEditor"
 import BackgroundSelection from "../panel/background-selection/BackgroundSelection"
 import BrandingDownload from "../panel/branding-download/BrandingDownload"
 import CanvasSizeSelection from "../panel/canvassize-selection/CanvasSizeSelection"
@@ -7,8 +8,9 @@ import ImagePositionSelection from "../panel/position-selection/ImagePositionSel
 import RadiusShadowSelection from "../panel/radius-shadow-selection/RadiusShadowSelection"
 
 const EditorPanel = () => {
+    const {mockup} = useEditor()
     return (
-        <div className="h-full flex flex-col gap-4 p-2">
+        <div className="relative h-full flex flex-col gap-4 p-2">
             <div className="flex-1 flex flex-col gap-4">
                 <div className="w-full px-4">
                     <BackgroundSelection />
@@ -34,6 +36,9 @@ const EditorPanel = () => {
                     <BrandingDownload />
                 </div>
             </div>
+            {
+                (mockup.imageUrl == undefined  || mockup.imageUrl == "") && <div className="absolute inset-0 bg-transparent cursor-not-allowed"></div>
+            }
         </div>
     )
 }

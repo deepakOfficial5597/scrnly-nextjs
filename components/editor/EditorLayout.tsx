@@ -84,11 +84,11 @@ const EditorLayout = () => {
     return (
         <div className="h-screen w-screen flex flex-col relative">
             <EditorHeader />
-            <main className="flex-1 flex flex-col md:flex-row bg-background-light">
+            <main className="flex-1 flex flex-col md:flex-row bg-background-extra_light">
                 <div className="flex-1 p-2">
                     {
                         mockup.imageUrl ? (
-                            <div className="w-full h-full relative flex items-center justify-center bg-white rounded-md p-2"  id="scrnly-canvas-parent" style={{"background":"url('/assets/grid.jpeg')"}}>
+                            <div className="w-full h-full relative flex items-center justify-center bg-white p-2 bg-canvas-grid"  id="scrnly-canvas-parent">
                                 <div className={`relative ${canvas.classNames} transition-all ease-linear`} style={canvas.styles}  id="scrnly-canvas">
                                     <div className={`absolute shadow-current ${mockup.classNames}`} style={mockup.styles}>
                                         <EditorMockup />
@@ -97,7 +97,7 @@ const EditorLayout = () => {
                                         panel.branding && <BrandingBanner />
                                     }
                                 </div>
-                                <button className="absolute left-2 top-2 flex items-center gap-2 text-xs md:text-sm shadow-md py-1 px-2 font-medium cursor-pointer rounded-md text-text-primary bg-background-light hover:bg-background-secondary " onClick={() => setShowPopup(true)}> <HiCloudUpload />Update Image </button>
+                                <button className="absolute left-2 top-2 flex items-center gap-2 text-xs md:text-sm shadow-md py-1 px-2 font-medium cursor-pointer rounded-md border-border-light text-text-primary hover:text-text-customgray" onClick={() => setShowPopup(true)}> <HiCloudUpload />Update Image </button>
                             </div>
                         )
                         : (
@@ -111,7 +111,7 @@ const EditorLayout = () => {
                         )
                     }
                 </div>
-                <div className="w-full md:w-[450px] bg-background-primary">
+                <div className="w-full md:w-[450px] bg-background-primary border-l border-border-light">
                     <EditorPanel />
                 </div>
             </main>
