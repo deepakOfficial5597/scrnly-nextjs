@@ -7,7 +7,7 @@ import EditorHeader from "./layout/EditorHeader"
 import EditorPanel from "../editor/layout/EditorPanel"
 import useEditor from "@/shared/hooks/useEditor"
 import { getImageSizeStyles } from '@/shared/utils/helpers'
-import { HiX } from "react-icons/hi";
+import { HiX, HiCloudUpload } from "react-icons/hi";
 
 const EditorLayout = () => {
 
@@ -97,7 +97,7 @@ const EditorLayout = () => {
                                         panel.branding && <BrandingBanner />
                                     }
                                 </div>
-                                <button className="absolute left-2 top-2 border shadow-md py-1 px-2 font-medium cursor-pointer rounded-md bg-indigo-900 text-white hover:bg-indigo-700" onClick={() => setShowPopup(true)}> Update Image </button>
+                                <button className="absolute left-2 top-2 flex items-center gap-2 text-xs md:text-sm shadow-md py-1 px-2 font-medium cursor-pointer rounded-md text-text-primary bg-background-light hover:bg-background-secondary " onClick={() => setShowPopup(true)}> <HiCloudUpload />Update Image </button>
                             </div>
                         )
                         : (
@@ -124,7 +124,7 @@ const EditorLayout = () => {
                         </div>
                         <input id="image__url" type="text" className="mt-1 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm" placeholder="Enter tweet URL or any website URL" onKeyDown={handleKeyDown}/>
                         <p>OR</p>
-                        <div className="h-[2000px] w-full rounded-md" style={{backgroundImage: `url(${mockup.imageUrl})`, backgroundOrigin: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}></div>
+                        <div className="h-[2000px] w-full rounded-md" style={{backgroundImage: `url(${mockup.imageUrl})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}></div>
                         <div className="w-full flex flex-row justify-center gap-4">
                             <button className="rounded-md bg-primary-default text-text-secondary px-8 py-1 text-sm md:text-md" onClick={initiateLocalUpload}>Upload New</button>
                             <button className="rounded-md bg-primary-pink text-text-secondary px-4 py-1 text-sm md:text-md" onClick={deleteMockupImage}>Delete</button>
