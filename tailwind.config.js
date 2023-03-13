@@ -30,7 +30,9 @@ module.exports = {
         border:{
           light: "#dfe1e1",
           dark: colors.gray[900],
-          primary: colors.indigo[900]
+          primary: colors.indigo[900],
+          extra_light: colors.gray[300],
+          lightest: colors.gray[200]
         }
       },
       backgroundImage: {

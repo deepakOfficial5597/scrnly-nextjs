@@ -1,4 +1,4 @@
-import { HiCheckCircle } from "react-icons/hi"
+import { MdRadioButtonChecked } from "react-icons/md"
 
 const GradientCard = ({title, gradient, selected = false}:GradientCardProps) => {
     return (
@@ -7,7 +7,7 @@ const GradientCard = ({title, gradient, selected = false}:GradientCardProps) => 
                 {
                     selected &&
                     <div className="absolute top-2 left-2">
-                        <HiCheckCircle className="text-primary-default"/>
+                        <MdRadioButtonChecked className="text-text-secondary"/>
                     </div>
                 }
             </div>

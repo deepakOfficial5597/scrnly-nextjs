@@ -35,7 +35,7 @@ const GradientSelector = ({active = false}:GradientSelectorProps) => {
         })
     }
     return (
-        <Listbox value={panel.backgroundType} onChange={changeGradientSelection}>
+        <Listbox value={panel.backgroundValue} onChange={changeGradientSelection}>
             <div className="relative w-full h-full">
                 <Listbox.Button className="relative h-full w-full border-2 border-transparent hover:border-2 hover:border-primary-default rounded-md" as="div" style={{background: panel.backgroundType === BACKGROUND_CONFIG.GRADIENT ? canvas?.styles?.background : getDefaultGradient().gradient }} onClick={ reInitializeState }>
                     {

@@ -30,66 +30,56 @@ export function getDefaultCanvasSize():string{
 }
 
 export function getPositionStyles(value:string){
+    const INSET_PADDING = "8px"
     switch(value){
         case(IMAGE_POSITION_CONFIG.TOP_LEFT):
             return {
-                position: "relative",
-                top: "8px",
-                left: "8px",
-                transform: `translate(0px,0px)`
+                inset: `${INSET_PADDING} auto auto ${INSET_PADDING}`,
+                transform: "unset"
             }
         case(IMAGE_POSITION_CONFIG.TOP_CENTER):
             return {
-                top: "8px",
-                left: "50%",
-                transform: `translate(-50%,0px)`
+                inset: `${INSET_PADDING} auto auto 50%`,
+                transform: "translate(-50%,0px)"
             }
         case(IMAGE_POSITION_CONFIG.TOP_RIGHT):
             return {
-                top: "8px",
-                right: "8px",
-                transform: `translate(0px,0px)`,
+                inset: `${INSET_PADDING} ${INSET_PADDING} auto auto`,
+                transform: "unset",
             }
         case(IMAGE_POSITION_CONFIG.CENTER_LEFT):
             return {
-                top: "50%",
-                left: "8px",
-                transform: `translate(0px,-50%)`
+                inset: `50% auto auto ${INSET_PADDING}`,
+                transform: "translate(0px,-50%)"
             }
         case(IMAGE_POSITION_CONFIG.CENTER_CENTER):
             return {
-                top: "50%",
-                left: "50%",
+                inset: `50% auto auto 50%`,
                 transform: `translate(-50%,-50%)`
             }
         case(IMAGE_POSITION_CONFIG.CENTER_RIGHT):
             return {
-                top: "50%",
-                right: "8px",
-                transform: `translate(-8px,-50%)`
+                inset: `50% ${INSET_PADDING} auto auto`,
+                transform: "translate(0px,-50%)"
             }
         case(IMAGE_POSITION_CONFIG.BOTTOM_LEFT):
             return {
-                bottom: "8px",
-                left: "8px",
-                transform: `translate(0px,-8px)`
+                inset: `auto auto ${INSET_PADDING} ${INSET_PADDING}`,
+                transform: "unset"
             }
         case(IMAGE_POSITION_CONFIG.BOTTOM_CENTER):
             return {
-                bottom: "8px",
-                left: "50%",
-                transform: `translate(-50%,-8px)`
+                inset: `auto auto ${INSET_PADDING} 50%`,
+                transform: `translate(-50%,0px)`
             }
         case(IMAGE_POSITION_CONFIG.BOTTOM_RIGHT):
             return {
-                bottom: "8px",
-                right: "8px",
-                transform: `translate(-8px,-8px)`
+                inset: `auto ${INSET_PADDING} ${INSET_PADDING} auto`,
+                transform: "unset"
             }
         default:
             return {
-                top: "50%",
-                left: "50%",
+                inset: "50% auto auto 50%",
                 transform: `translate(-50%,-50%)`
             }
     }
@@ -115,8 +105,8 @@ export function getCanvasSizeStyles(size:string){
     switch(size){
         case("1:1"):
             return {
-                height: "570px",
-                width: "570px"
+                height: "500px",
+                width: "500px"
             }
         case("16:9"):
             return {
@@ -130,13 +120,13 @@ export function getCanvasSizeStyles(size:string){
             }
         case("Instagram Post"):
             return {
-                height: "570px",
-                width: "305px"
+                height: "500px",
+                width: "300px"
             }
         default:
             return {
-                height: "570px",
-                width: "570px"
+                height: "500px",
+                width: "500px"
             }
     }
 }

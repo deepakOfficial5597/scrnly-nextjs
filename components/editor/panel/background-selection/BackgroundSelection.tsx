@@ -3,6 +3,7 @@ import SolidColorSelector from "./solid-color-selection/SolidColorSelector"
 import { BACKGROUND_CONFIG } from "@/shared/constants/config"
 import useEditor from "@/shared/hooks/useEditor"
 import NoBackgroundSelection from "./no-background-setter/NoBackgroundSelector"
+import SolidColorHandle from "./solid-color-selection/SolidColorHandle"
 
 const BACKGROUND_OPTIONS = BACKGROUND_CONFIG
 
@@ -29,7 +30,7 @@ const BackgroundSelection = () => {
                 <p className="text-xs text-center text-text-default">Gradient Template</p>
             </div>
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer">
-                <SolidColorSelector active={panel.backgroundType === BACKGROUND_OPTIONS.SOLID}/>
+                <SolidColorHandle active={panel.backgroundType === BACKGROUND_OPTIONS.SOLID}/>
                 <p className="text-xs text-center text-text-default">Solid Color</p>
             </div>
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer" onClick={setBlankCanvasBackgroound}>

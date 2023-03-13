@@ -7,7 +7,7 @@ const BrandingDownload = () => {
     const { panel, setPanel } = useEditor()
 
     const downloadCanvas = () =>{
-        const file_name_to_download = "scrnly-canvas" + new Date().getTime() + '.' 
+        const file_name_to_download = "scrnly-canvas-" + new Date().getTime() + '.' 
         var node:HTMLElement = document.getElementById('scrnly-canvas')!
         const extension = panel.downloadType.toLowerCase()
         const canvas_size = Number(panel.downloadSize)

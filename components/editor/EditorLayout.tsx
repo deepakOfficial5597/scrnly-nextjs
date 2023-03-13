@@ -85,10 +85,10 @@ const EditorLayout = () => {
         <div className="h-screen w-screen flex flex-col relative">
             <EditorHeader />
             <main className="flex-1 flex flex-col md:flex-row bg-background-extra_light">
-                <div className="flex-1 p-2">
+                <div className="flex-1 p-4">
                     {
                         mockup.imageUrl ? (
-                            <div className="w-full h-full relative flex items-center justify-center bg-white p-2 bg-canvas-grid"  id="scrnly-canvas-parent">
+                            <div className="w-full h-full relative flex items-center justify-center bg-white p-2 border border-border-lightest bg-canvas-grid rounded"  id="scrnly-canvas-parent">
                                 <div className={`relative ${canvas.classNames} transition-all ease-linear`} style={canvas.styles}  id="scrnly-canvas">
                                     <div className={`absolute shadow-current ${mockup.classNames}`} style={mockup.styles}>
                                         <EditorMockup />
@@ -103,7 +103,7 @@ const EditorLayout = () => {
                         : (
                             <div className="w-full h-full flex items-center justify-center bg-background-primary rounded-md p-2">
                                 <div className="w-3/4 flex flex-col gap-2 items-center bg-background-light p-10 rounded-md">
-                                <input id="image__url" type="text" className="mt-1 w-full border border-gray-300 px-3 py-2 rounded-lg text-xs md:text-sm shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Enter tweet URL or any website URL" onKeyDown={handleKeyDown}/>
+                                <input id="image__url" type="text" className="mt-1 w-full border border-border-extra_light px-3 py-2 rounded-lg text-xs md:text-sm shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Enter tweet URL or any website URL" onKeyDown={handleKeyDown}/>
                                 <p> OR </p>
                                 <button className="px-4 py-2 bg-primary-default text-white rounded-md text-xs md:text-sm relative cursor-pointer" >Upload a screenshot <input type="file" name="user-image"  className="absolute top-0 left-0 right-0 bottom-0 opacity-0 cursor-pointer" id="upload-btn" onChange={uploadLocalImage} /></button>
                                 </div>

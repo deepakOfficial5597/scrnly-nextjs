@@ -22,7 +22,7 @@ export const MOCKUP_INITIAL_STATE:Mockup = {
     },
     classNames:SHADOW_CONFIG[getDefaultBoxShadow()],
     type: MockupHeaderTypes.NO_FRAME,
-    // imageUrl: "https://th.bing.com/th/id/OIP.QJjN2LrOLtSwHKVUKUzSPAHaEK?pid=ImgDet&rs=1",
+    imageUrl: "https://th.bing.com/th/id/OIP.QJjN2LrOLtSwHKVUKUzSPAHaEK?pid=ImgDet&rs=1",
     imageStyles:{
         backgroundOrigin:"border-box",
         overflow:"hidden",
