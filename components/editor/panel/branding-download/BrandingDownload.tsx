@@ -1,7 +1,6 @@
 import BrandingButton from "./BrandingButton"
 import * as htmlToImage from 'html-to-image';
 import useEditor from "@/shared/hooks/useEditor";
-import SizeButton from "./SizeButton";
 
 const BrandingDownload = () => {
 
