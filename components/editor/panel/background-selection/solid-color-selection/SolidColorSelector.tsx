@@ -31,7 +31,7 @@ const SolidColorSelector = ({active = false}:GradientSelectorProps) => {
         <Listbox value="" >
             {({ open }) => (
                 <div className="relative w-full h-full">
-                    <Listbox.Button className="relative h-full w-full border-2 border-transparent hover:border-2 hover:border-primary-default rounded-md" as="div" style={{background: panel.backgroundType === BACKGROUND_CONFIG.SOLID ? canvas?.styles?.background : "#B77FCA" }} >
+                    <Listbox.Button className="relative h-full w-full border-2 border-background-primary hover:border-primary-default rounded-md" as="div" style={{background: panel.backgroundType === BACKGROUND_CONFIG.SOLID ? canvas?.styles?.background : "#B77FCA" }} >
                         {
                             active && (
                             <span className="absolute top-1 left-1">

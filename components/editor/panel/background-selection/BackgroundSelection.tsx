@@ -30,7 +30,7 @@ const BackgroundSelection = () => {
                 <p className="text-xs text-center text-text-default">Gradient Template</p>
             </div>
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer">
-                <SolidColorHandle active={panel.backgroundType === BACKGROUND_OPTIONS.SOLID}/>
+                <SolidColorSelector active={panel.backgroundType === BACKGROUND_OPTIONS.SOLID}/>
                 <p className="text-xs text-center text-text-default">Solid Color</p>
             </div>
             <div className="flex-1 flex flex-col gap-2 h-full cursor-pointer" onClick={setBlankCanvasBackgroound}>
