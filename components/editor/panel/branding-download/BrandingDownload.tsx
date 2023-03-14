@@ -1,6 +1,7 @@
 import BrandingButton from "./BrandingButton"
 import * as htmlToImage from 'html-to-image';
 import useEditor from "@/shared/hooks/useEditor";
+import SizeButton from "./SizeButton";
 
 const BrandingDownload = () => {
 
@@ -51,16 +52,16 @@ const BrandingDownload = () => {
                 <BrandingButton />
             </div>
             <div className="flex flex-row items-center gap-1">
-                <select className="rounded-md py-2 text-xs outline-none cursor-pointer" onChange={(e) => changeSizeSelection(e.target.value) }>
-                    <option value="1"> 1X </option>
-                    <option value="2"> 2X </option>
-                    <option value="3"> 3X </option>
+                <select className="form-select sm:text-xs md:text-sm rounded-md outline-none cursor-pointer border border-border-light focus:ring-1 focus:ring-primary-default" onChange={(e) => changeSizeSelection(e.target.value) }>
+                    <option className="" value="1"> 1x </option>
+                    <option className="" value="2"> 2x </option>
+                    <option className="" value="3"> 3x </option>
                 </select>
-                <select className="rounded-md py-2 text-xs cursor-pointer" onChange={(e) => changeDownloadTypeSelection(e.target.value)}>
+                <select className="form-select sm:text-xs md:text-sm rounded-md outline-none cursor-pointer border border-border-light focus:ring-1 focus:ring-primary-default" onChange={(e) => changeDownloadTypeSelection(e.target.value)}>
                     <option value="PNG"> PNG </option>
                     <option value="JPG"> JPG </option>
                 </select>
-                <button className="bg-primary-default rounded-md text-text-secondary px-3 text-xs py-2" onClick={downloadCanvas}>Download</button>
+                <button className="bg-primary-default rounded-md text-text-secondary px-3 text-sm py-[9px]" onClick={downloadCanvas}>Download</button>
             </div>
         </div>
     </>
