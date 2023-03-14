@@ -10,7 +10,7 @@ import RadiusShadowSelection from "../panel/radius-shadow-selection/RadiusShadow
 const EditorPanel = () => {
     const {mockup} = useEditor()
     return (
-        <div className="relative h-full flex flex-col gap-4 p-2">
+        <div className="relative h-full flex flex-col gap-4 py-4">
             <div className="flex-1 flex flex-col gap-4">
                 <div className="w-full px-4">
                     <BackgroundSelection />

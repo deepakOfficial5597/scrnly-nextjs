@@ -90,7 +90,7 @@ const EditorLayout = () => {
                         mockup.imageUrl ? (
                             <div className="w-full h-full relative flex items-center justify-center bg-white p-2 border border-border-lightest bg-canvas-grid rounded"  id="scrnly-canvas-parent">
                                 <div className={`relative ${canvas.classNames} transition-all ease-linear`} style={canvas.styles}  id="scrnly-canvas">
-                                    <div className={`absolute shadow-current ${mockup.classNames}`} style={mockup.styles}>
+                                    <div className={`is-loaded absolute shadow-current ${mockup.classNames}`} style={mockup.styles}>
                                         <EditorMockup />
                                     </div>
                                     {

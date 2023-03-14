@@ -7,13 +7,13 @@ const RadiusShadowSelection = () => {
     return (
         <div className="flex flex-row gap-4">
             <div className="flex-1">
-                <h1 className="mb-2 font-bold text-sm"> Border Radius <span className="text-[12px] bg-background-light text-text-customgray px-1">{panel.radius}</span></h1>
+                <h1 className="mb-2 font-bold text-sm"> Border Radius <span className="text-xs bg-background-light text-text-customgray px-2">{panel.radius}</span></h1>
                 <div className="flex flex-row gap-4">
                     <RadiusSelection />
                 </div>
             </div>
             <div className="flex-1 px-4">
-                <h1 className="mb-2 font-bold text-sm"> Shadow <span className="text-[12px] bg-background-light text-text-customgray px-1">{panel.shadow}</span></h1>
+                <h1 className="mb-2 font-bold text-sm"> Shadow <span className="text-xs bg-background-light text-text-customgray px-2">{panel.shadow}</span></h1>
                 <div className="flex flex-row gap-4">
                     <ShadowSelection />
                 </div>

@@ -22,9 +22,9 @@ const ShadowSelection = () => {
             }
         })
     }
-
+    const backgroundSizeValue = (Number(shadow) - 0) * 100 / (SHADOW_CONFIG.length - 1 - 0) + '% 100%'
     return <>
-        <input type="range" className="range accent-primary-default" value={shadow} max={SHADOW_CONFIG.length - 1} onChange={(e) => changeShadow(e.target.value)}/>
+        <input type="range" className="shadow-range-input" value={shadow} max={SHADOW_CONFIG.length - 1} onChange={(e) => changeShadow(e.target.value)} style={{backgroundSize:backgroundSizeValue}}/>
     </>
 }
 

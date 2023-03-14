@@ -18,8 +18,9 @@ const RadiusSelection = () => {
         }})
     }
 
+    const backgroundSizeValue = (Number(panel.radius) - 0) * 100 / (32 - 0) + '% 100%'
     return <>
-        <input type="range" className="range accent-primary-default" value={panel.radius} max={32} onChange={(e) => changeRadius(e.target.value)}/>
+        <input type="range" className="radius-range-input" value={panel.radius} max={32} onChange={(e) => changeRadius(e.target.value)} style={{backgroundSize:backgroundSizeValue}}/>
     </>
 }
 

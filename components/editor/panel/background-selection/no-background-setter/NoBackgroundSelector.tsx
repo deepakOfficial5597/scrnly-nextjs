@@ -1,7 +1,7 @@
 import { MdRadioButtonChecked } from "react-icons/md"
 const NoBackgroundSelector = ({active = false}:NoBackgroundSelectionProps) => {
     return <>
-        <div className="relative flex-1 bg-gradient-to-tr hover:border-2 hover:border-primary-default rounded-md border-2 border-border-dark">
+        <div className="relative flex-1 hover:border-2 hover:border-primary-default rounded-md border-2 border-border-light bg-no-background bg-left-top">
             {
                 active && (
                     <span className="absolute top-1 left-1">

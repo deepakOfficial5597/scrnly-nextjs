@@ -12,3 +12,26 @@
 body {
   font-family: 'Poppins', 'Roboto', sans-serif;
 }
+
+@layer base{
+  /* custom range input styles starts */
+  .shadow-range-input {
+    @apply appearance-none h-[7px] rounded bg-background-light bg-gradient-to-tr from-primary-default to-primary-default bg-no-repeat
+  }
+  .shadow-range-input::-webkit-slider-thumb {
+    @apply appearance-none h-3 w-3 rounded-full bg-white ring ring-primary-default
+  }
+  .shadow-range-input::-webkit-slider-runnable-track  {
+    @apply appearance-none shadow-none border-none bg-none cursor-pointer
+  }
+  .radius-range-input {
+    @apply appearance-none h-[7px] rounded bg-background-light bg-gradient-to-tr from-primary-default to-primary-default bg-no-repeat
+  }
+  .radius-range-input::-webkit-slider-thumb {
+    @apply appearance-none h-3 w-3 rounded-full bg-white ring ring-primary-default
+  }
+  .radius-range-input::-webkit-slider-runnable-track  {
+    @apply appearance-none shadow-none border-none bg-none cursor-pointer
+  }
+  /* custom range input styles ends */
+}
