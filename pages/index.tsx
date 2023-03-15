@@ -13,18 +13,18 @@ export default function Home() {
       <LandingPageSeo />
       <main>
         <Header />
-        <section className="h-[90vh] px-[5%] md:px-[17.5%] py-10 flex justify-center items-start">
+        <section className="h-[90vh] px-[5%] md:px-[17.5%] flex justify-end items-start">
           <HeroSection />
         </section>
-        <section className="px-[10%] md:px-[17.5%] py-10">
+        <section className="px-[10%] md:px-[13%] my-24">
           <Steps />
         </section>
-        <section className="px-[12%] flex flex-col gap-4 py-10">
+        <section className="px-[10%] md:px-[13%] flex flex-col gap-4 py-10">
           <h6 className="text-lg font-bold text-center">Use Cases</h6>
           <UseCases />
         </section>
-        <section className="px-[12%] flex flex-col gap-4 py-10">
-          <h6 className="text-lg font-bold">Frequently asked questions</h6>
+        <section className="px-[10%] md:px-[13%] flex flex-col gap-4 py-10">
+          <h6 className="text-3xl font-bold">Frequently asked questions</h6>
           <FAQ />
         </section>
       </main>

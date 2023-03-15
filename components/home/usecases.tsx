@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 
-const categories:string[] = ["screenshot","tweet","websiteurls"]
+const categories:string[] = ["screenshot","tweets","website urls"]
 const UseCases = () =>  {
 
   return (
@@ -11,7 +11,7 @@ const UseCases = () =>  {
           {categories.map((category) => (
             <Tab
               key={category}
-              className={({ selected }) =>`text-xs md:text-sm px-2 py-1 outline-none border  ml-4 rounded-md  hover:text-indigo-900 mb-2 md:mb-0 ${selected ? 'text-indigo-900 border-indigo-900 hover:border-indigo-900' : 'text-gray-900 border-gray-900 hover:border-gray-900'}` }>
+              className={({ selected }) =>`text-xs md:text-sm px-2 py-2 outline-none border ml-4 rounded-md mb-2 md:mb-0 tracking-normal hover:shadow ${selected ? 'text-primary-default font-bold border-border-dark ' : 'text-gray-900 border-border-light '}` }>
               {category}
             </Tab>
           ))}
@@ -21,7 +21,7 @@ const UseCases = () =>  {
             <Tab.Panel
               key={idx}
               className="self-center justify-self-center h-[200px] md:h-[250px] lg:h-[400px] w-full">
-                <div className="h-full w-full rounded-md bg-demo-screenshot bg-no-repeat bg-top bg-contain lg:bg-center "></div>
+                <div className="h-full w-full rounded-lg bg-demo-screenshot bg-no-repeat bg-top bg-cover lg:bg-center "></div>
             </Tab.Panel>
           ))}
         </Tab.Panels>
