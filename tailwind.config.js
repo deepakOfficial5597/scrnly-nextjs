@@ -36,7 +36,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'demo-screenshot': "url('/assets/demo-screenshot.png')",
+        'demo-screenshot-1': "url('/assets/demo-screenshot-1.png')",
+        'demo-screenshot-2': "url('/assets/demo-screenshot-2.png')",
         'canvas-grid': "url('/assets/grid.png')",
         'no-background': "url('/assets/no-background.png')"
       }

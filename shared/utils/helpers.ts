@@ -2,7 +2,7 @@ import { BACKGROUND_CONFIG, GRADIENT_CONFIG, IMAGE_POSITION_CONFIG, MOCKUP_CONFI
 import { GradientConfig, MockupConfig, MockupHeaderTypes } from "../types/shared.types";
 
 export function getDefaultGradient():GradientConfig{
-    return GRADIENT_CONFIG[0];
+    return GRADIENT_CONFIG[1];
 }
 
 export function getDefaultMockup():MockupConfig{
