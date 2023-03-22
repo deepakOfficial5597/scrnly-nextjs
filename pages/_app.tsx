@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { GA_TRACKING_ID } from "../libs/gtag";
 
-const isProduction = true;
+const isProduction = process.env.NODE_ENV === "production";
 
 export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
