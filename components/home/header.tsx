@@ -9,7 +9,7 @@ const Header = () => {
               <h1 className="font-extrabold text-primary-default">Scrnly</h1>
           </div>
           <div className="flex gap-2">
-            <Link href="/editor" className="text-sm tracking-wide mr-2 text-primary-default font-semibold hover:underline"> Editor </Link>  
+            <Link href="/editor" className="homepage_header_editor_cta text-sm tracking-wide mr-2 text-primary-default font-semibold hover:underline"> Editor </Link>  
           </div>
         </header>
     )

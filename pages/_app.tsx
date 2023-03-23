@@ -1,32 +1,21 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { GA_TRACKING_ID } from "../libs/gtag";
+import { useEffect } from 'react';
+import TagManager, {TagManagerArgs} from 'react-gtm-module'
 
 const isProduction = process.env.NODE_ENV === "production";
-
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || ""
 export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+  
+  const tagManagerArgs:TagManagerArgs = {
+    gtmId: GTM_ID
+  }
+
+  useEffect(()=>{
+    if(isProduction) TagManager.initialize(tagManagerArgs)
+  },[])
+
   return (
-    <>
-      { isProduction && (<>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <script
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_TRACKING_ID}', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
-        />
-      </>)}
-      <Component {...pageProps} />
-    </>
+    <Component {...pageProps} />
   )
 }

@@ -19,13 +19,13 @@ const HeroSection = () => {
                 <input id="image__url" type="text" className="mt-1 w-full border border-gray-300 px-3 py-3 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm placeholder:text-gray-600" placeholder="Enter tweet URL or any website URL" onKeyDown={handleKeyDown}/>
                 <p className="text-primary-default font-bold"> OR </p>
               </div> */}
-                <Link href="/editor?t=upload" className="px-8 py-3 bg-primary-default text-white rounded-md text-xs sm:text-sm">Upload a screenshot</Link>
+                <Link href="/editor?t=upload" className="homepage_upload_cta px-8 py-3 bg-primary-default text-white rounded-md text-xs sm:text-sm">Upload a screenshot</Link>
               <div className="w-full flex flex-col gap-2 items-center">
                 <div className="w-full flex flex-row gap-4 justify-center">
-                  <Link href="/editor?t=sample&v=1" className="rounded-md overflow-hidden">
+                  <Link href="/editor?t=sample&v=1" className="homepage_sample_cta rounded-md overflow-hidden">
                     <Image src="/assets/demo-image/demo-image-1.png" height={70} width={70} alt="Sample Image 1"/>
                   </Link>
-                  <Link href="/editor?t=sample&v=2" className="rounded-md overflow-hidden">
+                  <Link href="/editor?t=sample&v=2" className="homepage_sample_cta rounded-md overflow-hidden">
                     <Image src="/assets/demo-image/demo-image-2.png" height={70} width={70} alt="Sample Image 2"/>
                   </Link>
                 </div>

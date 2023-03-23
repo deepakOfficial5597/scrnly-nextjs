@@ -60,7 +60,7 @@ const BrandingDownload = () => {
                     <option value="PNG"> PNG </option>
                     <option value="JPG"> JPG </option>
                 </select>
-                <button className="bg-primary-default rounded-md text-text-secondary px-3 text-sm py-[9px]" onClick={downloadCanvas}>Download</button>
+                <button className="panel_download_btn bg-primary-default rounded-md text-text-secondary px-3 text-sm py-[9px]" onClick={downloadCanvas}>Download</button>
             </div>
         </div>
     </>
