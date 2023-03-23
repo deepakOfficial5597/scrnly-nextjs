@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
     return (
         <div className="h-full w-full flex flex-col justify-center items-center gap-8 px-10 md:px-0">
-            <h1 className="text-5xl md:text-3xl lg:text-5xl font-extrabold tracking-wide text-center max-w-[60%]" style={{"lineHeight": "65px"}}> Beautify screenshots in just a few clicks</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold tracking-wide text-center md:max-w-[60%]" style={{"lineHeight": "65px"}}> Beautify screenshots in just few clicks</h1>
             <div className="w-full flex flex-col justify-center items-center gap-6">
               {/* <div className="w-[50%] flex flex-col gap-3 items-center bg-gray-100 p-5 rounded-lg border border-dotted border-spacing-3 border-gray-400 shadow">
                 <input id="image__url" type="text" className="mt-1 w-full border border-gray-300 px-3 py-3 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-sm placeholder:text-gray-600" placeholder="Enter tweet URL or any website URL" onKeyDown={handleKeyDown}/>
@@ -29,7 +29,7 @@ const HeroSection = () => {
                     <Image src="/assets/demo-image/demo-image-2.png" height={70} width={70} alt="Sample Image 2"/>
                   </Link>
                 </div>
-                <p className="text-lg font-light">or try out with these samples ☝️</p>
+                <p className="text-lg font-light text-center">or try out with these samples ☝️</p>
               </div>
             </div>
             
