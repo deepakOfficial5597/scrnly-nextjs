@@ -4,7 +4,6 @@ import HeroSection from '@/components/home/hero-section'
 import Steps from '@/components/home/steps'
 import UseCases from '@/components/home/usecases'
 import Header from '@/components/home/header'
-import Head from 'next/head'
 import LandingPageSeo from '@/components/seo/landing.page'
 
 export default function Home() {
