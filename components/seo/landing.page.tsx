@@ -8,6 +8,9 @@ const LandingPageSeo = () => {
             <meta name="title" content="Scrnly - Beautify screenshots in just a few clicks" />
             <meta name="description" content="Beautify screenshots in just a few clicks" />
             <meta name="author" content="Scrnly Team" />
+            
+            <meta name="robots" content="all" />            
+            <link rel="canonical" href="https://scrnly.com/" />
 
             <meta name="og:image" content="/assets/seo/website_landing_page.PNG" />
             <meta name="og:image:width" content="300px" />
