@@ -10,6 +10,16 @@ import { useRouter } from "next/router";
 const isProduction = process.env.NODE_ENV === "production";
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
 
+
+if (typeof window !== 'undefined') {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || "dummy", {
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://app.posthog.com',
+    loaded: (posthog) => {
+      if (process.env.NODE_ENV === 'development') posthog.debug()
+    }
+  })
+}
+
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
