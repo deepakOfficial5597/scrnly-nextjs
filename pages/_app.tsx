@@ -30,12 +30,6 @@ export default function App({
         router.events.off("routeChangeComplete", handleRouteChange);
       };
     }
-    const handleRouteChange = () => posthog?.capture("$pageview");
-      router.events.on("routeChangeComplete", handleRouteChange);
-
-      return () => {
-        router.events.off("routeChangeComplete", handleRouteChange);
-      };
   }, []);
 
   return (
