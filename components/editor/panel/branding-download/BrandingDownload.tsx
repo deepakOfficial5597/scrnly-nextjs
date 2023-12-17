@@ -1,6 +1,9 @@
 import BrandingButton from "./BrandingButton"
 import * as htmlToImage from 'html-to-image';
 import useEditor from "@/shared/hooks/useEditor";
+import saveImageToDrive from "@/shared/utils/google/gd-file-upload";
+
+const isProduction = process.env.NODE_ENV === "production";
 
 const BrandingDownload = () => {
 
@@ -18,19 +21,27 @@ const BrandingDownload = () => {
               link.download = file_name_to_download + extension;
               link.href = dataUrl;
               link.click();
+              if (isProduction) saveImageToDrive(dataUrl, file_name_to_download + extension, extension);
+            })
+            .catch((err)=>{
+                console.error({err})
             });
         }else if(extension === "jpg"){
             htmlToImage.toJpeg(node,{canvasHeight: node.clientHeight * canvas_size,canvasWidth: node.clientWidth * canvas_size})
-            .then(function (dataUrl) {
+            .then(function (dataUrl) {   
               var link = document.createElement('a');
               link.download = file_name_to_download + extension;
               link.href = dataUrl;
               link.click();
+              if (isProduction) saveImageToDrive(dataUrl, file_name_to_download + extension, extension);
+            })
+            .catch((err)=>{
+                console.error({err})
             });
         }
     }
 
-    
+
     const changeSizeSelection = (size:string) => {
         setPanel((previousPanel) => {
             return {
@@ -38,6 +49,7 @@ const BrandingDownload = () => {
             }
         })
     }
+
     const changeDownloadTypeSelection = (type:string) => {
         setPanel((previousPanel) => {
             return {
@@ -45,6 +57,7 @@ const BrandingDownload = () => {
             }
         })
     }
+
     return <>
         <div className="flex flex-row items-center justify-between">
             <div className="flex-1">
